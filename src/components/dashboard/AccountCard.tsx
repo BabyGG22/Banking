@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Account } from '@/types'
-import { Eye, EyeOff, ArrowUpRight, ArrowDownLeft } from 'lucide-react'
+import { Eye, EyeOff } from 'lucide-react'
 import { useState } from 'react'
 
 interface AccountCardProps {
