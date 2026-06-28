@@ -24,7 +24,7 @@ const CustomTooltip = ({ active, payload }: TooltipProps) => {
         <p className="font-semibold text-slate-900 dark:text-white">
           {payload[0].name}
         </p>
-        <p className="text-brand-600 dark:text-brand-400 font-bold">
+        <p className="text-blue-600 dark:text-blue-400 font-bold">
           ${payload[0].value}
         </p>
       </div>
@@ -43,12 +43,12 @@ export function SpendingChart({ data }: SpendingChartProps) {
             cx="50%"
             cy="50%"
             labelLine={false}
-            label={({ name, percentage }) => `${name} ${percentage}%`}
+            label={({ name, percentage }: { name: string; percentage: number }) => `${name} ${percentage}%`}
             outerRadius={120}
             fill="#8884d8"
             dataKey="amount"
           >
-            {data.map((any, index) => (
+            {data.map((_item, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
