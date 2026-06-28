@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CreditCard, TrendingUp, Lock, Smartphone, Send, PieChart, Users, Gift } from 'lucide-react'
+import { CreditCard, TrendingUp, Lock, Smartphone, Send, PieChart } from 'lucide-react'
 
 const services = [
   {
