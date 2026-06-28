@@ -48,7 +48,7 @@ export function SpendingChart({ data }: SpendingChartProps) {
             fill="#8884d8"
             dataKey="amount"
           >
-            {data.map((entry, index) => (
+            {data.map((index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
