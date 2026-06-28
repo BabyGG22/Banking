@@ -1,11 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Eye, Zap, Fingerprint } from 'lucide-react'
+import { Shield, Zap, Fingerprint, Eye } from 'lucide-react'
 
 const securityFeatures = [
   {
-    icon: Lock: Shield,
+    icon: Shield,
     title: 'Encrypted Banking',
     description: 'End-to-end encryption protects all your transactions and personal data.',
   },
@@ -99,7 +99,6 @@ export function SecuritySection() {
             className="relative hidden lg:flex items-center justify-center"
           >
             <div className="relative w-full max-w-md aspect-square">
-              {/* Animated Shield */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-64 h-64">
                   <motion.div
