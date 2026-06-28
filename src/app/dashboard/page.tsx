@@ -12,7 +12,8 @@ import { mockUser, mockAccounts, mockTransactions, mockCards, mockSpendingData, 
 import { Bell, Send, Plus, TrendingUp } from 'lucide-react'
 
 export default function Dashboard() {
-  const [selectedAccount, setSelectedAccount]
+  const [selectedAccount, setSelectedAccount]= useState(0)
+}
 
   const container = {
     hidden: { opacity: 0 },
