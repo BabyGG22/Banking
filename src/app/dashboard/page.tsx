@@ -9,7 +9,7 @@ import { TransactionList } from '@/components/dashboard/TransactionList'
 import { SpendingChart } from '@/components/dashboard/SpendingChart'
 import { CardDisplay } from '@/components/dashboard/CardDisplay'
 import { mockUser, mockAccounts, mockTransactions, mockCards, mockSpendingData, mockSavingsGoals } from '@/lib/mockData'
-import { Bell, Send, Plus, TrendingUp, Target } from 'lucide-react'
+import { Bell, Send, Plus, TrendingUp } from 'lucide-react'
 
 export default function Dashboard() {
   const [selectedAccount, setSelectedAccount] = useState(0)
