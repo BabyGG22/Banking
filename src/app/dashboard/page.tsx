@@ -12,7 +12,7 @@ import { mockUser, mockAccounts, mockTransactions, mockCards, mockSpendingData, 
 import { Bell, Send, Plus, TrendingUp } from 'lucide-react'
 
 export default function Dashboard() {
-  const [selectedAccount, setSelectedAccount]= useState(0)
+  const [selectedAccount, setSelectedAccount] = useState(0)
 
   const container = {
     hidden: { opacity: 0 },
@@ -68,10 +68,10 @@ export default function Dashboard() {
           >
             <motion.button
               variants={item}
-              className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-soft-lg transition-all flex items-center gap-3 group"
+              className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all flex items-center gap-3 group"
             >
-              <div className="w-10 h-10 rounded-lg bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Send className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+              <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Send className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               </div>
               <div className="text-left">
                 <p className="font-semibold text-slate-900 dark:text-white">Send Money</p>
@@ -81,7 +81,7 @@ export default function Dashboard() {
 
             <motion.button
               variants={item}
-              className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-soft-lg transition-all flex items-center gap-3 group"
+              className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all flex items-center gap-3 group"
             >
               <div className="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Plus className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
@@ -94,7 +94,7 @@ export default function Dashboard() {
 
             <motion.button
               variants={item}
-              className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-soft-lg transition-all flex items-center gap-3 group"
+              className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all flex items-center gap-3 group"
             >
               <div className="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <TrendingUp className="w-5 h-5 text-purple-600 dark:text-purple-400" />
@@ -115,7 +115,6 @@ export default function Dashboard() {
           >
             {/* Left Column - Accounts & Cards */}
             <motion.div variants={item} className="lg:col-span-1 space-y-6">
-              {/* Accounts */}
               <div className="space-y-4">
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white">Accounts</h2>
                 <div className="space-y-3">
@@ -130,7 +129,6 @@ export default function Dashboard() {
                 </div>
               </div>
 
-              {/* Cards */}
               <div className="space-y-4">
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white">Cards</h2>
                 <div className="space-y-3">
@@ -146,7 +144,7 @@ export default function Dashboard() {
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-xl font-bold text-slate-900 dark:text-white">Recent Transactions</h2>
-                  <a href="#" className="text-sm text-brand-600 dark:text-brand-400 hover:underline">
+                  <a href="#" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
                     View all
                   </a>
                 </div>
@@ -158,7 +156,6 @@ export default function Dashboard() {
 
             {/* Right Column - Analytics */}
             <motion.div variants={item} className="lg:col-span-1 space-y-6">
-              {/* Spending */}
               <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-6">
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Spending</h2>
                 <SpendingChart data={mockSpendingData} />
@@ -174,7 +171,7 @@ export default function Dashboard() {
             <div className="md:col-span-3">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white">Savings Goals</h2>
-                <button className="text-sm text-brand-600 dark:text-brand-400 hover:underline">View all</button>
+                <button className="text-sm text-blue-600 dark:text-blue-400 hover:underline">View all</button>
               </div>
               <div className="grid md:grid-cols-3 gap-6">
                 {mockSavingsGoals.map((goal) => {
@@ -183,11 +180,11 @@ export default function Dashboard() {
                     <motion.div
                       key={goal.id}
                       whileHover={{ scale: 1.02 }}
-                      className="p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-soft-lg transition-all"
+                      className="p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all"
                     >
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-3xl">{goal.icon}</div>
-                        <span className="text-xs font-semibold text-brand-600 dark:text-brand-400 bg-brand-100 dark:bg-brand-900/40 px-3 py-1 rounded-full">
+                        <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 px-3 py-1 rounded-full">
                           {Math.round(progress)}%
                         </span>
                       </div>
@@ -197,7 +194,7 @@ export default function Dashboard() {
                       </p>
                       <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 overflow-hidden">
                         <div
-                          className="bg-gradient-to-r from-brand-500 to-brand-600 h-full transition-all duration-300"
+                          className="bg-gradient-to-r from-blue-500 to-blue-600 h-full transition-all duration-300"
                           style={{ width: `${progress}%` }}
                         />
                       </div>
