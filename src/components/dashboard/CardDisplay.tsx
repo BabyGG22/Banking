@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Card } from '@/types'
-import { Chip } from 'lucide-react'
+import { CreditCard } from 'lucide-react'
 
 interface CardDisplayProps {
   card: Card
@@ -44,7 +44,7 @@ export function CardDisplay({ card }: CardDisplayProps) {
         {/* Header */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Chip className="w-8 h-8" />
+            <CreditCard className="w-8 h-8" />
             <span className="font-semibold">{getCardNetwork(card.cardNetwork)}</span>
           </div>
           <div className={`px-3 py-1 rounded-full text-xs font-bold ${
