@@ -50,7 +50,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group">
               <div className="w-8 h-8 bg-gradient-to-br from-brand-500 to-brand-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
+                <span className="text-white font-bold text-sm">B</span>
               </div>
               <span className="text-xl font-bold group-hover:text-brand-400 transition-colors">
                 BOJ
