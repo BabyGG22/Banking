@@ -59,7 +59,7 @@ export function WhyChooseUsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Why Choose Zenith Bank?
+            Why Choose Bank Of July?
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Trusted by millions for unmatched reliability and innovation
