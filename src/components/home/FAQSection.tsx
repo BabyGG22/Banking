@@ -6,11 +6,11 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    question: 'How do I open an account with Zenith Bank?',
+    question: 'How do I open an account with Bank Of July?',
     answer: 'Opening an account is simple and takes just 5 minutes. Download our mobile app or visit our website, click "Open Account," and follow the guided setup process. You\'ll need a valid ID and phone number.',
   },
   {
-    question: 'Is my money safe with Zenith Bank?',
+    question: 'Is my money safe with Bank Of July?',
     answer: 'Yes, absolutely. Your deposits are protected by government insurance up to $250,000 per account. We also use military-grade encryption and multi-factor authentication for all transactions.',
   },
   {
