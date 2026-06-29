@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: 'Sarah Anderson',
     role: 'Entrepreneur',
-    content: 'Zenith Bank transformed how I manage my business finances. The intuitive interface and powerful tools are unmatched.',
+    content: 'Bank Of July transformed how I manage my business finances. The intuitive interface and powerful tools are unmatched.',
     rating: 5,
     avatar: '👩‍💼',
   },
@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: 'Emma Wilson',
     role: 'Freelancer',
-    content: 'Fast transfers, low fees, and excellent customer support. Zenith is my go-to banking platform.',
+    content: 'Fast transfers, low fees, and excellent customer support. BOJ is my go-to banking platform.',
     rating: 5,
     avatar: '👩‍🎨',
   },
@@ -63,7 +63,7 @@ export function TestimonialsSection() {
             Trusted by Millions
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            See what our customers have to say about their experience with Zenith Bank
+            See what our customers have to say about their experience with Bank Of July
           </p>
         </motion.div>
 
