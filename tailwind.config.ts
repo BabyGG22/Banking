@@ -12,16 +12,16 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          50: '#f0f7ff',
-          100: '#e0f0fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c3d66',
+          50: '#e8edf7',
+          100: '#c5d0eb',
+          200: '#9eb0dc',
+          300: '#7690cd',
+          400: '#5878c2',
+          500: '#3a60b7',
+          600: '#1a4aaa',
+          700: '#0f3a8f',
+          800: '#0a2a72',
+          900: '#071d54',
         },
       },
       boxShadow: {
@@ -30,8 +30,7 @@ const config: Config = {
         'soft-xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', ...defaultTheme.fontFamily.sans],
-        mono: ['var(--font-geist-mono)', ...defaultTheme.fontFamily.mono],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
