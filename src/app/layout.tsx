@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/providers/ThemeProvider'
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
-  title: 'Zenith Bank | Premium Digital Banking',
-  description: 'Experience premium banking with Zenith. Secure, modern, and trusted by millions worldwide.',
+  title: 'Bank of July | BOJ — Modern Digital Banking',
+  description: 'Experience premium banking with Bank of July. Secure, modern, and trusted worldwide.',
   viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/favicon.ico',
