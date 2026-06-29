@@ -3,35 +3,26 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
   },
 }
 
 const item = {
   hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { type: 'spring', stiffness: 100 },
-  },
+  show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
 }
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-brand-50 dark:from-slate-900 via-white dark:via-slate-800 to-slate-50 dark:to-slate-900 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-brand-200 dark:bg-brand-900/30 rounded-full blur-3xl opacity-20" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-200 dark:bg-blue-900/30 rounded-full blur-3xl opacity-20" />
-      </div>
+    <section className="relative bg-brand-900 overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700 opacity-95" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -42,64 +33,93 @@ export function HeroSection() {
             animate="show"
             className="space-y-6"
           >
-            <motion.div variants={item} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-sm font-medium">
-              <CheckCircle className="w-4 h-4" />
+            <motion.div
+              variants={item}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium border border-white/20"
+            >
+              <CheckCircle className="w-4 h-4 text-brand-300" />
               Trusted by millions worldwide
             </motion.div>
 
-            <motion.h1 variants={item} className="text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight">
+            <motion.h1
+              variants={item}
+              className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight"
+            >
               Banking for the
-              <span className="bg-gradient-to-r from-brand-600 to-brand-400 bg-clip-text text-transparent"> Modern World</span>
+              <span className="text-brand-300"> Modern World</span>
             </motion.h1>
 
-            <motion.p variants={item} className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-lg">
+            <motion.p
+              variants={item}
+              className="text-xl text-white/70 leading-relaxed max-w-lg"
+            >
               Experience premium banking with cutting-edge technology, unmatched security, and personalized financial solutions designed for your success.
             </motion.p>
 
-            <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link href="#" className="btn-primary inline-flex items-center justify-center gap-2 group">
+            <motion.div
+              variants={item}
+              className="flex flex-col sm:flex-row gap-4 pt-4"
+            >
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-brand-900 rounded-xl font-semibold hover:bg-brand-50 transition-all group"
+              >
                 Open an Account
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="#" className="btn-ghost inline-flex items-center justify-center gap-2">
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/10 transition-all"
+              >
                 Explore Features
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
 
             {/* Stats */}
-            <motion.div variants={item} className="flex gap-8 pt-8 border-t border-slate-200 dark:border-slate-700">
+            <motion.div
+              variants={item}
+              className="flex flex-wrap gap-8 pt-8 border-t border-white/20"
+            >
               <div>
-                <div className="text-3xl font-bold text-brand-600 dark:text-brand-400">50M+</div>
-                <div className="text-slate-600 dark:text-slate-400 text-sm">Active Users</div>
+                <div className="text-3xl font-bold text-white">50M+</div>
+                <div className="text-white/60 text-sm mt-1">Active Users</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-brand-600 dark:text-brand-400">$500B+</div>
-                <div className="text-slate-600 dark:text-slate-400 text-sm">Assets Under Management</div>
+                <div className="text-3xl font-bold text-white">$500B+</div>
+                <div className="text-white/60 text-sm mt-1">Assets Under Management</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-brand-600 dark:text-brand-400">150+</div>
-                <div className="text-slate-600 dark:text-slate-400 text-sm">Countries</div>
+                <div className="text-3xl font-bold text-white">150+</div>
+                <div className="text-white/60 text-sm mt-1">Countries</div>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Image */}
+          {/* Hero Image */}
           <motion.div
-            variants={item}
-            className="relative hidden lg:flex items-center justify-center"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative hidden lg:block"
           >
-            <div className="relative w-full aspect-square max-w-md">
-              {/* Phone Mockup */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-600 to-brand-900 rounded-3xl shadow-2xl overflow-hidden transform perspective">
-                <div className="w-full h-full bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 p-4 flex flex-col items-center justify-center">
-                  <div className="w-full h-full bg-gradient-to-br from-brand-50 to-blue-50 dark:from-brand-900/30 dark:to-blue-900/30 rounded-2xl border border-brand-200 dark:border-brand-800 flex items-center justify-center">
-                    <div className="text-center space-y-4">
-                      <div className="w-12 h-12 bg-brand-600 rounded-full mx-auto" />
-                      <div className="h-2 bg-slate-300 dark:bg-slate-600 rounded w-24 mx-auto" />
-                      <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded w-32 mx-auto" />
-                    </div>
-                  </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
+              <Image
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80"
+                alt="Professional woman using mobile banking"
+                fill
+                className="object-cover"
+                priority
+              />
+              {/* Overlay card */}
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-brand-900/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-semibold text-slate-700">Total Balance</span>
+                  <span className="text-xs text-brand-600 font-medium bg-brand-50 px-2 py-0.5 rounded-full">+2.4%</span>
+                </div>
+                <div className="text-2xl font-bold text-slate-900">$48,295.00</div>
+                <div className="mt-2 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                  <div className="h-full w-3/4 bg-gradient-to-r from-brand-500 to-brand-400 rounded-full" />
                 </div>
               </div>
             </div>
