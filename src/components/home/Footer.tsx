@@ -53,7 +53,7 @@ export function Footer() {
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="text-xl font-bold group-hover:text-brand-400 transition-colors">
-                Zenith
+                BOJ
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -82,9 +82,9 @@ export function Footer() {
                   <Phone className="w-5 h-5" />
                   <span>+1 (234) 567-890</span>
                 </a>
-                <a href="mailto:support@zenithbank.com" className="flex items-center gap-3 text-slate-400 hover:text-brand-400 transition-colors">
+                <a href="mailto:support@bankofjuly.com" className="flex items-center gap-3 text-slate-400 hover:text-brand-400 transition-colors">
                   <Mail className="w-5 h-5" />
-                  <span>support@zenithbank.com</span>
+                  <span>support@bankofjuly.com</span>
                 </a>
                 <div className="flex items-center gap-3 text-slate-400">
                   <MapPin className="w-5 h-5" />
@@ -137,7 +137,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            © {currentYear} Zenith Bank. All rights reserved.
+            © {currentYear} Bank Of July. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link href="#" className="text-slate-400 hover:text-brand-400 transition-colors">
